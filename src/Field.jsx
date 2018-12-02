@@ -4,13 +4,13 @@ import { FormContext } from "./Form";
 class OptComponent extends React.PureComponent {
   render() {
     const { component, ...restOfProps } = this.props;
-    return component(restOfProps);
+    return <div style={{padding: '20px'}}>{component(restOfProps)}</div>;
   }
 }
 
 export class Field extends React.PureComponent {
   render() {
-    const { name, component, additionalFields = null } = this.props;
+    const { name, component } = this.props;
 
     return (
       <FormContext.Consumer>
