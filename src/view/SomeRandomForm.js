@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Form } from "./Form";
-import { Field } from "./Field";
-import { InputFormField } from "./InputFormField";
+
+import { InputFormField } from "./FormComponents/InputFormField";
+import { Form, Field } from "./Form"
 
 class SomeRandomForm extends Component {
   render() {
@@ -36,7 +36,6 @@ class SomeRandomForm extends Component {
 
         <Field
           name="third"
-          // additionalFields={["surname"]}
           component={fieldProps => 
             new Array(1000)
               .join("0")
